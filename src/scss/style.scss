@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  paddinging: 0;
+}
+
+body {
+  background-image: url("../images/digits-4014181.jpg");
+  background-color: peachpuff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #app {
+    max-width: 1200px;
+    margin: 20px;
+
+
+    .coverPage {
+
+      color: black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      h1{
+        background-color: rgba(69, 209, 197, 0.8);
+        border-radius: 25px;
+      }
+      h1, h2, h3 {
+        text-align: center;
+        margin: 10px;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 10px;
+        margin: 10px;
+        text-align: justify;
+        background-color: rgba(69, 209, 197, 0.8);
+        border-radius: 25px;
+
+      }
+      button{
+        min-width: 300px;
+        height: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: rgb(69, 209, 197);
+        border-radius: 20px;
+        border: none;
+        color:white;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.84);
+      }
+
+      .coverFact {
+        font-size: 1.2rem;
+      }
+
+    }
+
+    .main {
+     // background-color: rgba(69, 209, 197, 0.8);
+      //border-radius:20px;
+      color: white;
+      //padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      h1{
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        padding:5px;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.84);
+      }
+
+      .mainOptions {
+
+        //padding: 10px;
+       // margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+div{
+  background-color: rgba(69, 209, 197, 0.8);
+  border-radius: 10px;
+  color: white;
+  padding:5px 0px;
+  margin: 5px 0px;
+  font-size: 1rem;
+  min-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+
+.detailedOptions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+
+
+}
+}
+      }
+
+     .fact{
+       background-color: rgba(69, 209, 197, 0.8);
+       border-radius: 10px;
+       color: white;
+       padding:10px;
+       margin: 10px;
+       font-size: 1.5rem;
+       min-height: 50px;
+       text-align: center;
+       text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+     }
+    }
+
+  }
+  .quizHeader{
+    background-color: black;
+    color: white;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h1{
+      background-color: black;
+    color: white;
+   width:100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+    p{
+      background-color: black;
+      color: white;
+      max-width: 1200px;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+
+    }
+
+  }
+}

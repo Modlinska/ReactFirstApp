@@ -1,0 +1,75 @@
+{
+  "questions": [
+    {
+      "question": "Do czego służy setState",
+      "answear1": {
+        "answear": "Metoda ta służy do zmiany wewnętrznego stanu komponentu",
+        "score": 1
+      },
+      "answear2": {
+        "answear": "Do niczego",
+        "score": 0
+      },"answear3": {
+        "answear": "Metoda ta służy do wyświetlania komponentu na stronie",
+        "score": 0
+      }
+    },
+    {
+      "question": "Treść pytania nr 2",
+      "answear1": {
+        "answear": "Treść odpowiedzi 1",
+        "score": 1
+      },
+      "answear2": {
+        "answear": "Treść odpowiedzi 2",
+        "score": 0
+      },"answear3": {
+        "answear": "Treść odpowiedzi 3",
+        "score": 0
+      }
+    },
+    {
+      "question": "Treść pytania nr 3",
+      "answear1": {
+        "answear": "Treść odpowiedzi 1",
+        "score": 1
+      },
+      "answear2": {
+        "answear": "Treść odpowiedzi 2",
+        "score": 0
+      },"answear3": {
+        "answear": "Treść odpowiedzi 3",
+        "score": 0
+      }
+    },
+    {
+      "question": "Treść pytania nr 4",
+      "answear1": {
+        "answear": "Treść odpowiedzi 1",
+        "score": 1
+      },
+      "answear2": {
+        "answear": "Treść odpowiedzi 2",
+        "score": 0
+      },"answear3": {
+        "answear": "Treść odpowiedzi 3",
+        "score": 0
+      }
+    },
+    {
+      "question": "Treść pytania nr 5",
+      "answear1": {
+        "answear": "Treść odpowiedzi 1",
+        "score": 1
+      },
+      "answear2": {
+        "answear": "Treść odpowiedzi 2",
+        "score": 0
+      },"answear3": {
+        "answear": "Treść odpowiedzi 3",
+        "score": 0
+      }
+    }
+
+  ]
+}
