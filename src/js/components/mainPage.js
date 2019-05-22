@@ -5,7 +5,7 @@ import QuizStart from "./QuizStart"
 
 export default class MainPage extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             mathFact: false,
             trivia: false,
@@ -80,7 +80,7 @@ export default class MainPage extends Component {
     };
 
     userMathFact = () => {
-
+        if (this.validUserNumber) {
             fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
                 .then(resp => {
                     if (resp.ok) {
@@ -101,6 +101,7 @@ export default class MainPage extends Component {
                     });
                     console.log("Error" + err.message);
                 })
+        }
 
     };
 
