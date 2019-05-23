@@ -4,23 +4,12 @@
 @import "partials/_app.scss";
 @import "partials/_coverPage.scss";
 @import "partials/_mainPage.scss";
+@import "partials/_quizWelcommePage";
 
 
 
 
 
-  .quizHeader{
-    background-color: black;
-    color: white;
-    max-width: 1200px;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   .questions{
     display: flex;

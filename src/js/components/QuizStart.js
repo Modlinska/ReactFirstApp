@@ -26,8 +26,8 @@ export default class QuizStart extends Component {
                     <h1>13 September is The Day of the Programmer</h1>
                     <h2>Is it yours holiday? Let's check it! </h2>
                     <button onClick={this.handleOnClick} >Ready? GO!</button>
-
                 </div>
+                <div className="image"></div>
             </section>
 
         )
