@@ -74,6 +74,11 @@ export default class CoverPage extends Component {
                 <p className="coverFact">
                     { this.state.fact}
                 </p>
+                <div className="numbersImage">
+                    <div className="number1Image"></div>
+                    <div className="number2Image"></div>
+                    <div className="number3Image"></div>
+                </div>
                 <button onClick={this.handleMoreCuriosities}>For more curiosities click!</button>
 
             </div>

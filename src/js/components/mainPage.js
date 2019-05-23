@@ -381,8 +381,6 @@ export default class MainPage extends Component {
                 {(this.state.ErrorMesssage != "") && <div className="fact">
                     <p>{this.state.ErrorMesssage}</p>
                 </div>}
-
-
             </section>
         )
     }

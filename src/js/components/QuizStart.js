@@ -23,7 +23,7 @@ export default class QuizStart extends Component {
         return (
             <section className="quiz">
                 <div className="quizHeader">
-                    <h1>13 September is The Day of the Programmer</h1>
+                    <h1>13th September is The Day of the Programmer</h1>
                     <h2>Is it yours holiday? Let's check it! </h2>
                     <button onClick={this.handleOnClick} >Ready? GO!</button>
                 </div>
