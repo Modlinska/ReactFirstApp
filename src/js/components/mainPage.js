@@ -375,6 +375,13 @@ export default class MainPage extends Component {
                         </div>}
                     </div>
                 </div>
+                {(this.state.showFact === " ") &&
+                <div className="numbersImage">
+                    <div className="number1Image"></div>
+                    <div className="number2Image"></div>
+                    <div className="number3Image"></div>
+                </div>
+                }
                 {(this.state.showFact != " ") &&
                 <p className="fact">{this.state.showFact}</p>
                 }
