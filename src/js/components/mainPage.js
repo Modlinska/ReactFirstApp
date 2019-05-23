@@ -4,7 +4,7 @@ import QuizStart from "./QuizStart"
 
 export default class MainPage extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             mathFact: false,
             trivia: false,
@@ -16,7 +16,10 @@ export default class MainPage extends Component {
             userDate: "",
             userYear: "",
             showFact: " ",
-            ErrorMesssage: ""
+            errorMesssageUserNumber: "",
+            errorMessageUserTrivia: "",
+            errorMessageUserDate: "",
+            errorMessageUserYear: ""
         };
     }
 
@@ -79,28 +82,29 @@ export default class MainPage extends Component {
     };
 
     userMathFact = () => {
+        if (this.validData()) {
+            fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        throw new Error("Database conection error");
+                    }
+                })
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        showFact: data.text
+                    });
+                })
+                .catch(err => {
+                    this.setState({
+                        error: err.message
+                    });
+                    console.log("Error" + err.message);
+                })
 
-        fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
-            .then(resp => {
-                if (resp.ok) {
-                    return resp.json();
-                } else {
-                    throw new Error("Database conection error");
-                }
-            })
-            .then(data => {
-                console.log(data);
-                this.setState({
-                    showFact: data.text
-                });
-            })
-            .catch(err => {
-                this.setState({
-                    error: err.message
-                });
-                console.log("Error" + err.message);
-            })
-
+        }
     };
 
     randoMathFact = () => {
@@ -138,26 +142,27 @@ export default class MainPage extends Component {
     };
 
     userTriviaFact = () => {
-        fetch("http://numbersapi.com/" + this.state.userNumberTrivia + "/trivia" + "?json")
-            .then(resp => {
-                if (resp.ok) {
-                    return resp.json();
-                } else {
-                    throw new Error("Database conection error");
-                }
-            })
-            .then(data => {
-                this.setState({
-                    showFact: data.text
-                });
-            })
-            .catch(err => {
-                this.setState({
-                    error: err.message
-                });
-                console.log("Error" + err.message);
-            })
-
+        if (this.validData()) {
+            fetch("http://numbersapi.com/" + this.state.userNumberTrivia + "/trivia" + "?json")
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        throw new Error("Database conection error");
+                    }
+                })
+                .then(data => {
+                    this.setState({
+                        showFact: data.text
+                    });
+                })
+                .catch(err => {
+                    this.setState({
+                        error: err.message
+                    });
+                    console.log("Error" + err.message);
+                })
+        }
     };
 
     randomTrivia = () => {
@@ -195,26 +200,27 @@ export default class MainPage extends Component {
     };
 
     userDateFact = () => {
-        fetch("http://numbersapi.com/" + this.state.userDate + "/date" + "?json")
-            .then(resp => {
-                if (resp.ok) {
-                    return resp.json();
-                } else {
-                    throw new Error("Database conection error");
-                }
-            })
-            .then(data => {
-                this.setState({
-                    showFact: data.text
-                });
-            })
-            .catch(err => {
-                this.setState({
-                    error: err.message
-                });
-                console.log("Error" + err.message);
-            })
-
+        if (this.validData()) {
+            fetch("http://numbersapi.com/" + this.state.userDate + "/date" + "?json")
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        throw new Error("Database conection error");
+                    }
+                })
+                .then(data => {
+                    this.setState({
+                        showFact: data.text
+                    });
+                })
+                .catch(err => {
+                    this.setState({
+                        error: err.message
+                    });
+                    console.log("Error" + err.message);
+                })
+        }
     };
 
     randomDate = () => {
@@ -249,27 +255,28 @@ export default class MainPage extends Component {
     };
 
     userYearFact = () => {
-        fetch("http://numbersapi.com/" + this.state.userYear + "/year" + "?json")
-            .then(resp => {
-                if (resp.ok) {
-                    return resp.json();
-                } else {
-                    throw new Error("Database conection error");
-                }
-            })
-            .then(data => {
-                console.log(data);
-                this.setState({
-                    showFact: data.text
-                });
-            })
-            .catch(err => {
-                this.setState({
-                    error: err.message
-                });
-                console.log("Error" + err.message);
-            })
-
+        if (this.validData()) {
+            fetch("http://numbersapi.com/" + this.state.userYear + "/year" + "?json")
+                .then(resp => {
+                    if (resp.ok) {
+                        return resp.json();
+                    } else {
+                        throw new Error("Database conection error");
+                    }
+                })
+                .then(data => {
+                    console.log(data);
+                    this.setState({
+                        showFact: data.text
+                    });
+                })
+                .catch(err => {
+                    this.setState({
+                        error: err.message
+                    });
+                    console.log("Error" + err.message);
+                })
+        }
     };
 
     randomYear = () => {
@@ -298,10 +305,56 @@ export default class MainPage extends Component {
             })
     };
 
+    validData = () => {
+
+        this.setState({
+            errorMesssageUserNumber: "",
+            errorMessageUserTrivia: "",
+            errorMessageUserDate: "",
+            errorMessageUserYear: ""
+        });
+        let re = /^[0-9]+$/;
+        let valid = true;
+
+        if (!re.test(this.state.userNumberMath) && (this.state.userNumberMath != "")) {
+
+            valid = false;
+            this.setState({
+                errorMesssageUserNumber: "Wpisz poprawnie liczbę"
+            });
+
+        }
+
+
+        if (!re.test(this.state.userNumberTrivia) && (this.state.userNumberTrivia != "")) {
+            valid = false;
+            this.setState({
+                errorMessageUserTrivia: "Wpisz poprawnie liczbę"
+            });
+        }
+        let rex = /^(0[1-9]|1[012])[//.](0[1-9]|[12][0-9]|3[01])$/;
+        if (!rex.test(this.state.userDate) && (this.state.userDate != "")) {
+            valid = false;
+            this.setState({
+                errorMessageUserDate: "Wpisz poprawnie datę"
+            });
+        }
+        if ((parseInt(this.state.userYear)) > 2019 && (this.state.userYear != "")) {
+            valid = false;
+            this.setState({
+                errorMessageUserYear: "Wpisz poprawnie rok"
+            });
+        }
+
+
+        return valid;
+
+
+    };
 
     render() {
 
-        if (this.state.userDate === "9/13") {
+        if (this.state.userDate === "09/13") {
             return <QuizStart/>
         }
         return (
@@ -311,6 +364,8 @@ export default class MainPage extends Component {
                 <div className="mainOptions">
                     <div onClick={this.handleGetMathFact}> Numbers math facts
                         {this.state.mathFact && <div className="detailedOptions">
+                            {(this.state.errorMesssageUserNumber != "") &&
+                            <p className="error">{this.state.errorMesssageUserNumber}</p>}
                             <span>
                             <input
                                 placeholder="Put your number here"
@@ -319,6 +374,7 @@ export default class MainPage extends Component {
                             />
                                 <button className="okBtn" onClick={this.userMathFact}>OK</button>
                             </span>
+
                             <p> OR </p>
                             <button className="randomBtn" onClick={this.randoMathFact}>Get Random</button>
                         </div>}
@@ -328,6 +384,8 @@ export default class MainPage extends Component {
                         {this.state.trivia &&
 
                         <div className="detailedOptions">
+                            {(this.state.errorMessageUserTrivia != "") &&
+                            <p className="error">{this.state.errorMessageUserTrivia}</p>}
                             <span>
                             <input
                                 placeholder="Put your number here"
@@ -345,6 +403,8 @@ export default class MainPage extends Component {
                             <div onClick={this.handleGetmonDayFact}>Dates
                                 {this.state.monDayFac &&
                                 <div className="detailedOptions">
+                                    {(this.state.errorMessageUserDate != "") &&
+                                    <p className="error">{this.state.errorMessageUserDate}</p>}
                                     <span>
                                     <input
                                         placeholder="Your date: mm/dd"
@@ -360,6 +420,8 @@ export default class MainPage extends Component {
                             <div onClick={this.handleGetYearFact}> Years
                                 {this.state.yearFact &&
                                 <div className="detailedOptions">
+                                    {(this.state.errorMessageUserYear != "") &&
+                                    <p className="error">{this.state.errorMessageUserYear}</p>}
                                     <span>
                                     <input
                                         placeholder="Put your year here"
@@ -385,9 +447,7 @@ export default class MainPage extends Component {
                 {(this.state.showFact != " ") &&
                 <p className="fact">{this.state.showFact}</p>
                 }
-                {(this.state.ErrorMesssage != "") && <div className="fact">
-                    <p>{this.state.ErrorMesssage}</p>
-                </div>}
+
             </section>
         )
     }

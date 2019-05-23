@@ -79,9 +79,15 @@
 
         input::placeholder {
           font-size: 0.8rem;
-        }
-      ;
 
+        }
+
+        .error{
+          font-size: 0.9rem;
+          color:red;
+          text-shadow: none;
+
+        }
         .okBtn {
           color: $mainFontColor;
           background-color: $mainColor;
