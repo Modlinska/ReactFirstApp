@@ -1,73 +1,28 @@
-* {
-  margin: 0;
-  paddinging: 0;
-}
+@import "partials/_reset";
+@import "_variables.scss";
+@import "partials/_coverPage.scss";
+@import "partials/_app.scss";
+@import "partials/_mainPage.scss";
+
 
 body {
-  background-image: url("../images/digits-4014181.jpg");
-  background-color: peachpuff;
+  //background-image: url("../images/pay-4101949_1920.jpg");
+  background-color: $mainColor;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  #app {
-    max-width: 1200px;
-    margin: 20px;
+  font-family: Arial, sans-serif;
 
 
-    .coverPage {
 
-      color: black;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
 
-      h1{
-        background-color: rgba(69, 209, 197, 0.8);
-        border-radius: 25px;
-      }
-      h1, h2, h3 {
-        text-align: center;
-        margin: 10px;
-        color: white;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
 
-      }
 
-      p {
-        font-size: 1rem;
-        padding: 10px;
-        margin: 10px;
-        text-align: justify;
-        background-color: rgba(69, 209, 197, 0.8);
-        border-radius: 25px;
-
-      }
-      button{
-        min-width: 300px;
-        height: 50px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        background-color: rgb(69, 209, 197);
-        border-radius: 20px;
-        border: none;
-        color:white;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.84);
-      }
-
-      .coverFact {
-        font-size: 1.2rem;
-      }
-
-    }
 
     .main {
-     // background-color: rgba(69, 209, 197, 0.8);
+    // background-color: rgba(69, 209, 197, 0.8);
       //border-radius:20px;
       color: white;
       //padding: 20px;
@@ -169,4 +124,3 @@ div{
     }
 
   }
-}

@@ -80,7 +80,7 @@ export default class MainPage extends Component {
     };
 
     userMathFact = () => {
-        if (this.validUserNumber) {
+
             fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
                 .then(resp => {
                     if (resp.ok) {
@@ -101,7 +101,6 @@ export default class MainPage extends Component {
                     });
                     console.log("Error" + err.message);
                 })
-        }
 
     };
 
@@ -318,9 +317,9 @@ export default class MainPage extends Component {
                                 value={this.state.userNumberMath}
                                 onChange={this.handleUserMathNumber}
                             />
-                            <button onClick={this.userMathFact}>OK</button>
+                            <button className="okBtn" onClick={this.userMathFact}>OK</button>
                             <p> OR </p>
-                            <button onClick={this.randoMathFact}>Get Random</button>
+                            <button className="randomBtn" onClick={this.randoMathFact}>Get Random</button>
                         </div>}
 
                     </div>
@@ -333,9 +332,9 @@ export default class MainPage extends Component {
                                 value={this.state.userNumberTrivia}
                                 onChange={this.handleUserTriviaNumber}
                             />
-                            <button onClick={this.userTriviaFact}>OK</button>
+                            <button className="okBtn" onClick={this.userTriviaFact}>OK</button>
                             <p>OR</p>
-                            <button onClick={this.randomTrivia}>Get Random</button>
+                            <button className="randomBtn"  onClick={this.randomTrivia}>Get Random</button>
                         </div>}
                     </div>
                     <div onClick={this.handleGetDateFact}> Facts about dates
@@ -348,9 +347,9 @@ export default class MainPage extends Component {
                                         value={this.state.userDate}
                                         onChange={this.handleUserDate}
                                     />
-                                    <button onClick={this.userDateFact}>OK</button>
+                                    <button className="okBtn" onClick={this.userDateFact}>OK</button>
                                     <p>OR</p>
-                                    <button onClick={this.randomDate}>Get Random</button>
+                                    <button className="randomBtn"  onClick={this.randomDate}>Get Random</button>
                                 </div>}
                             </div>
                             <div onClick={this.handleGetYearFact}> Years
@@ -361,9 +360,9 @@ export default class MainPage extends Component {
                                         value={this.state.userYear}
                                         onChange={this.handleUserYear}
                                     />
-                                    <button onClick={this.userYearFact}> OK</button>
+                                    <button className="okBtn" onClick={this.userYearFact}> OK</button>
                                     <p>OR</p>
-                                    <button onClick={this.randomYear}>Get Random</button>
+                                    <button className="randomBtn" onClick={this.randomYear}>Get Random</button>
                                 </div>}
                             </div>
                         </div>}

@@ -70,9 +70,9 @@ export default class CoverPage extends Component {
         return (
             <div className="coverPage">
                 <h1>Hello! Today is <Clock datetime={this.state.datetime}/></h1>
-                <p>Did you know that fact about this date?</p>
+                <h2>Fact of the Day:</h2>
                 <p className="coverFact">
-                    {this.state.fact}
+                    { this.state.fact}
                 </p>
                 <button onClick={this.handleMoreCuriosities}>For more curiosities click!</button>
 
