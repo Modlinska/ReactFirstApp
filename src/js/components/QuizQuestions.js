@@ -161,7 +161,7 @@ export default class QuizQuestions extends Component {
             return <QuizSummary score={this.state.score}/>
         }
         return (
-
+            <section className="quizQuestions">
             <div className="questions">
                 <h3> {this.state.question}</h3>
                 <p onClick={this.handleGetScore} data-id="1"
@@ -174,6 +174,7 @@ export default class QuizQuestions extends Component {
                 <button onClick={this.handleToNextQuestion}>Next question</button>}
                 {this.state.numberOfquestion >= 4 && <button onClick={this.handleGoToSummary}>Finish</button>}
             </div>
+            </section>
 
         )
     }

@@ -19,10 +19,10 @@ export default class QuizSummary extends Component {
         clearTimeout(timeout);
     }
 
-    handleToMainPage =()=>{
-      this.setState({
-          toMain:true
-      })
+    handleToMainPage = () => {
+        this.setState({
+            toMain: true
+        })
     };
 
     render() {
@@ -30,17 +30,21 @@ export default class QuizSummary extends Component {
             return <MainPage/>
         }
         if (this.props.score > 3) {
-            return (<div className="quizSummary">
-                    <h1> Congratulations! You got {this.props.score} score!</h1>
-                    <button onClick={this.handleToMainPage}>Go back</button>
-                </div>
+            return (<section className="summary">
+                    <div className="quizSummary">
+                        <h1> Congratulations! You got {this.props.score} score!</h1>
+                        <button onClick={this.handleToMainPage}>Go back</button>
+                    </div>
+                </section>
             )
         } else {
             return (
-                <div className="quizSummary">
-                    <h1> Sorry! You got {this.props.score} score </h1>
-                    <button onClick={this.handleToMainPage}>Go back</button>
-                </div>
+                <section className="summary">
+                    <div className="quizSummary">
+                        <h1> Sorry! You got {this.props.score} score </h1>
+                        <button onClick={this.handleToMainPage}>Go back</button>
+                    </div>
+                </section>
             )
         }
 

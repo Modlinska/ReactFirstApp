@@ -1,5 +1,5 @@
-body{
-  //background-image: url("../images/pay-4101949_1920.jpg");
+body {
+
   background-color: $mainColor;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,4 +7,8 @@ body{
   align-items: center;
   justify-content: center;
   font-family: Arial, sans-serif;
+  @media (min-width: 1024px) {
+    background-image: url("/src/images/digits-4014181_1920.jpg");
+    background-size: cover;
+  }
 }

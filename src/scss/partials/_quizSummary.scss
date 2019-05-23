@@ -1,3 +1,17 @@
+.summary{
+  @media (min-width:1024px ){
+    height:90vh;
+    margin:40px;
+    padding: 30px;
+    background-color: $mainColor;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
 .quizSummary{
   display: flex;
   flex-direction: column;
@@ -9,6 +23,9 @@
   color:$mainFontColor;
   border-radius: 10px;
   height: 100%;
+  @media (min-width:1024px ){
+    min-width: 800px;
+  }
 
   button{
     color: $mainFontColor;
@@ -18,5 +35,10 @@
     height: 2rem;
     margin: 20px 0;
     cursor: pointer;
+    @media (min-width:1024px ){
+      margin: 50px 0;
+      height: 2.3rem;
+    }
   }
+}
 }
