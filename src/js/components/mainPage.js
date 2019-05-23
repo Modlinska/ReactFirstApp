@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import NumbersMath from "./NumbersMath"
 import QuizStart from "./QuizStart"
 
 export default class MainPage extends Component {
@@ -81,26 +80,26 @@ export default class MainPage extends Component {
 
     userMathFact = () => {
 
-            fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
-                .then(resp => {
-                    if (resp.ok) {
-                        return resp.json();
-                    } else {
-                        throw new Error("Database conection error");
-                    }
-                })
-                .then(data => {
-                    console.log(data);
-                    this.setState({
-                        showFact: data.text
-                    });
-                })
-                .catch(err => {
-                    this.setState({
-                        error: err.message
-                    });
-                    console.log("Error" + err.message);
-                })
+        fetch("http://numbersapi.com/" + this.state.userNumberMath + "/math" + "?json")
+            .then(resp => {
+                if (resp.ok) {
+                    return resp.json();
+                } else {
+                    throw new Error("Database conection error");
+                }
+            })
+            .then(data => {
+                console.log(data);
+                this.setState({
+                    showFact: data.text
+                });
+            })
+            .catch(err => {
+                this.setState({
+                    error: err.message
+                });
+                console.log("Error" + err.message);
+            })
 
     };
 
@@ -312,12 +311,14 @@ export default class MainPage extends Component {
                 <div className="mainOptions">
                     <div onClick={this.handleGetMathFact}> Numbers math facts
                         {this.state.mathFact && <div className="detailedOptions">
+                            <span>
                             <input
                                 placeholder="Put your number here"
                                 value={this.state.userNumberMath}
                                 onChange={this.handleUserMathNumber}
                             />
-                            <button className="okBtn" onClick={this.userMathFact}>OK</button>
+                                <button className="okBtn" onClick={this.userMathFact}>OK</button>
+                            </span>
                             <p> OR </p>
                             <button className="randomBtn" onClick={this.randoMathFact}>Get Random</button>
                         </div>}
@@ -327,14 +328,16 @@ export default class MainPage extends Component {
                         {this.state.trivia &&
 
                         <div className="detailedOptions">
+                            <span>
                             <input
                                 placeholder="Put your number here"
                                 value={this.state.userNumberTrivia}
                                 onChange={this.handleUserTriviaNumber}
                             />
                             <button className="okBtn" onClick={this.userTriviaFact}>OK</button>
+                            </span>
                             <p>OR</p>
-                            <button className="randomBtn"  onClick={this.randomTrivia}>Get Random</button>
+                            <button className="randomBtn" onClick={this.randomTrivia}>Get Random</button>
                         </div>}
                     </div>
                     <div onClick={this.handleGetDateFact}> Facts about dates
@@ -342,25 +345,29 @@ export default class MainPage extends Component {
                             <div onClick={this.handleGetmonDayFact}>Dates
                                 {this.state.monDayFac &&
                                 <div className="detailedOptions">
+                                    <span>
                                     <input
                                         placeholder="Your date: mm/dd"
                                         value={this.state.userDate}
                                         onChange={this.handleUserDate}
                                     />
                                     <button className="okBtn" onClick={this.userDateFact}>OK</button>
+                                    </span>
                                     <p>OR</p>
-                                    <button className="randomBtn"  onClick={this.randomDate}>Get Random</button>
+                                    <button className="randomBtn" onClick={this.randomDate}>Get Random</button>
                                 </div>}
                             </div>
                             <div onClick={this.handleGetYearFact}> Years
                                 {this.state.yearFact &&
                                 <div className="detailedOptions">
+                                    <span>
                                     <input
                                         placeholder="Put your year here"
                                         value={this.state.userYear}
                                         onChange={this.handleUserYear}
                                     />
                                     <button className="okBtn" onClick={this.userYearFact}> OK</button>
+                                    </span>
                                     <p>OR</p>
                                     <button className="randomBtn" onClick={this.randomYear}>Get Random</button>
                                 </div>}
@@ -368,9 +375,9 @@ export default class MainPage extends Component {
                         </div>}
                     </div>
                 </div>
-                {(this.state.showFact != " ") && <div className="fact">
-                    <p>{this.state.showFact}</p>
-                </div>}
+                {(this.state.showFact != " ") &&
+                <p className="fact">{this.state.showFact}</p>
+                }
                 {(this.state.ErrorMesssage != "") && <div className="fact">
                     <p>{this.state.ErrorMesssage}</p>
                 </div>}

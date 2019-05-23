@@ -1,90 +1,14 @@
-@import "partials/_reset";
 @import "_variables.scss";
-@import "partials/_coverPage.scss";
+@import "partials/_reset";
+@import "partials/_body";
 @import "partials/_app.scss";
+@import "partials/_coverPage.scss";
 @import "partials/_mainPage.scss";
 
 
-body {
-  //background-image: url("../images/pay-4101949_1920.jpg");
-  background-color: $mainColor;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
 
 
 
-
-
-
-
-    .main {
-    // background-color: rgba(69, 209, 197, 0.8);
-      //border-radius:20px;
-      color: white;
-      //padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-
-      h1{
-        font-weight: bold;
-        font-size: 2rem;
-        text-align: center;
-        padding:5px;
-        text-shadow: 2px 2px 1px rgba(0,0,0,0.84);
-      }
-
-      .mainOptions {
-
-        //padding: 10px;
-       // margin: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-div{
-  background-color: rgba(69, 209, 197, 0.8);
-  border-radius: 10px;
-  color: white;
-  padding:5px 0px;
-  margin: 5px 0px;
-  font-size: 1rem;
-  min-width: 300px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
-
-.detailedOptions{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 0px;
-
-
-}
-}
-      }
-
-     .fact{
-       background-color: rgba(69, 209, 197, 0.8);
-       border-radius: 10px;
-       color: white;
-       padding:10px;
-       margin: 10px;
-       font-size: 1.5rem;
-       min-height: 50px;
-       text-align: center;
-       text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
-     }
-    }
-
-  }
   .quizHeader{
     background-color: black;
     color: white;

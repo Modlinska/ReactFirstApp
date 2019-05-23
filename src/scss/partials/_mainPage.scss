@@ -1,61 +1,109 @@
 
 .main {
-  // background-color: rgba(69, 209, 197, 0.8);
-  //border-radius:20px;
+  background-color: $mainColor;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  h1{
+  h1 {
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
-    padding:5px;
-    text-shadow: 2px 2px 1px rgba(0,0,0,0.84);
+    padding: 5px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.84);
   }
 
   .mainOptions {
-
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    div{
-      background-color: $mainColor;
+
+    span{
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    div {
+      background-color: $secondColorOpacity;
       border-radius: 10px;
-      color: white;
-      padding:5px 0px;
-      margin: 5px 0px;
+      color: $mainFontColor;
+      padding: 10px 0px;
+      margin: 10px 0px;
       font-size: 1rem;
       min-width: 300px;
       text-align: center;
       font-weight: bold;
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.84);
+      cursor: pointer;
 
-      .detailedOptions{
+      .detailedOptions {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         padding: 5px 0px;
+        margin: 5px 0;
+        background-color: $secondColor;
 
+
+        input {
+          padding: 3px;
+          margin: 5px 0;
+          width: 200px;
+          height:  2rem;
+          text-align: center;
+          font-weight: bold;
+          color: $mainColor;
+          font-size: $factsFontSizeForMobile;
+        }
+        input::placeholder{font-size:0.8rem;} ;
+
+        .okBtn {
+          color: $mainFontColor;
+          background-color: $mainColor;
+          font-weight: bold;
+          height: 2rem;
+          display: inline-block;
+          margin: 0 0 5px 5px;
+          cursor: pointer;
+        }
+
+        .randomBtn {
+          color: $mainFontColor;
+          background-color: $mainColor;
+          font-weight: bold;
+          width: 200px;
+          height: 2rem;
+          margin: 5px 0;
+          cursor: pointer;
+
+        }
 
       }
     }
   }
 
-  .fact{
+  .fact {
+    font-size: $factsFontSizeForMobile;
+    color: $mainFontColor;
+    padding: 25px;
+    margin: 20px 0;
+    text-align: justify;
     background-color: $secondColorOpacity;
-    border-radius: 10px;
-    color: white;
-    padding:10px;
-    margin: 10px;
-    font-size: 1.5rem;
-    min-height: 50px;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.84);
+    min-width: 320px;
+    @media (min-width: 425px ) {
+     min-width: 425px;
+    }
+    @media (min-width: 768px ) {
+      min-width: 768px;
+      text-align: center;
+    }
   }
 }
 
