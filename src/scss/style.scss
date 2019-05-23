@@ -5,35 +5,11 @@
 @import "partials/_coverPage.scss";
 @import "partials/_mainPage.scss";
 @import "partials/_quizWelcommePage";
+@import "partials/_quizQuestions";
+@import "partials/_quizSummary";
 
 
 
 
 
 
-  .questions{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    h1{
-      background-color: black;
-    color: white;
-   width:100%;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-    p{
-      background-color: black;
-      color: white;
-      max-width: 1200px;
-      margin: 20px;
-      padding: 10px;
-      border-radius: 10px;
-      width: 100%;
-
-    }
-
-  }

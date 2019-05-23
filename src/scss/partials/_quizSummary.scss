@@ -1,0 +1,22 @@
+.quizSummary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  background-color: $quizBackground;
+  color:$mainFontColor;
+  border-radius: 10px;
+  height: 100%;
+
+  button{
+    color: $mainFontColor;
+    background-color: $mainColor;
+    font-weight: bold;
+    width: 200px;
+    height: 2rem;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+}

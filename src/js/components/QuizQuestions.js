@@ -46,9 +46,9 @@ export default class QuizQuestions extends Component {
                     answear1score: data[this.state.numberOfquestion].answear1.score,
                     answear2score: data[this.state.numberOfquestion].answear2.score,
                     answear3score: data[this.state.numberOfquestion].answear3.score,
-                    background1: "black",
-                    background2: "black",
-                    background3: "black",
+                    background1: "",
+                    background2: "",
+                    background3: "",
                 });
             })
             .catch(err => {
@@ -163,7 +163,7 @@ export default class QuizQuestions extends Component {
         return (
 
             <div className="questions">
-                <h1> {this.state.question}</h1>
+                <h3> {this.state.question}</h3>
                 <p onClick={this.handleGetScore} data-id="1"
                    style={{backgroundColor: this.state.background1}}> {this.state.answear1}</p>
                 <p onClick={this.handleGetScore} data-id="2"
@@ -171,8 +171,8 @@ export default class QuizQuestions extends Component {
                 <p onClick={this.handleGetScore} data-id="3"
                    style={{backgroundColor: this.state.background3}}> {this.state.answear3}</p>
                 {this.state.numberOfquestion < 4 &&
-                <button onClick={this.handleToNextQuestion}> Nastęne pytanie</button>}
-                {this.state.numberOfquestion >= 4 && <button onClick={this.handleGoToSummary}>Zakończ</button>}
+                <button onClick={this.handleToNextQuestion}>Next question</button>}
+                {this.state.numberOfquestion >= 4 && <button onClick={this.handleGoToSummary}>Finish</button>}
             </div>
 
         )
