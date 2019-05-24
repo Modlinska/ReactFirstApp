@@ -92,7 +92,7 @@ export default class MainPage extends Component {
                     }
                 })
                 .then(data => {
-                    console.log(data);
+
                     this.setState({
                         showFact: data.text
                     });
@@ -180,7 +180,7 @@ export default class MainPage extends Component {
                 }
             })
             .then(data => {
-                console.log(data);
+
                 this.setState({
                     showFact: data.text
                 });

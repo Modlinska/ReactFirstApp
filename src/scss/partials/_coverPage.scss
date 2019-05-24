@@ -8,7 +8,7 @@
   justify-content: space-around;
   border-radius: 25px;
   @media (min-width: 1024px) {
-    height: 90vh;
+    min-height: 90%;
     margin: 20px;
   }
 
@@ -37,7 +37,7 @@
     .number1Image, .number2Image, .number3Image {
       @media (min-width: 1024px) {
         height: 100px;
-        width: 100px;
+       width: 100px;
         background-image: url("/src/images/counting-149959_640.png");
         background-repeat: no-repeat;
         background-size: contain;

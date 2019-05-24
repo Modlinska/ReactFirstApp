@@ -13,9 +13,10 @@ module.exports = {
             template: './src/index.html'
         })
     ],
+    watch:true,
     devServer: {
-        // contentBase: path.join(__dirname, `${entryPath}`),
-        // publicPath: "/build/",
+       //contentBase: path.join(__dirname, `${entryPath}`),
+      // publicPath: "/build/",
         compress: true,
         port: 3001,
         historyApiFallback: true

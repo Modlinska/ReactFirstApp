@@ -68,7 +68,7 @@ export default class CoverPage extends Component {
             return <MainPage/>
         }
         return (
-            <div className="coverPage">
+            <section className="coverPage">
                 <h1>Hello! Today is <Clock datetime={this.state.datetime}/></h1>
                 <h2>Fact of the Day:</h2>
                 <p className="coverFact">
@@ -81,7 +81,7 @@ export default class CoverPage extends Component {
                 </div>
                 <button onClick={this.handleMoreCuriosities}>For more curiosities click!</button>
 
-            </div>
+            </section>
         )
     }
 }

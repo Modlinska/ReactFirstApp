@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "question": "Do czego służy setState",
+      "question": "Do czego służy setState?",
       "answear1": {
         "answear": "Metoda ta służy do zmiany wewnętrznego stanu komponentu",
         "score": 1
@@ -9,64 +9,69 @@
       "answear2": {
         "answear": "Do niczego",
         "score": 0
-      },"answear3": {
+      },
+      "answear3": {
         "answear": "Metoda ta służy do wyświetlania komponentu na stronie",
         "score": 0
       }
     },
     {
-      "question": "Treść pytania nr 2",
+      "question": "Który atrybut metody $.ajax() jest wymagany?",
       "answear1": {
-        "answear": "Treść odpowiedzi 1",
-        "score": 1
+        "answear": "dataType",
+        "score": 0
       },
       "answear2": {
-        "answear": "Treść odpowiedzi 2",
-        "score": 0
-      },"answear3": {
-        "answear": "Treść odpowiedzi 3",
+        "answear": "url",
+        "score": 1
+      },
+      "answear3": {
+        "answear": "method",
         "score": 0
       }
     },
     {
-      "question": "Treść pytania nr 3",
+      "question": "Co to jest koercja typów w Java Script?",
       "answear1": {
-        "answear": "Treść odpowiedzi 1",
+        "answear": "Jest to inaczej konwersja typów tak, aby można było je ze sobą porównać.",
         "score": 1
       },
       "answear2": {
-        "answear": "Treść odpowiedzi 2",
+        "answear": "W Java Script nie ma czegoś takiego",
         "score": 0
-      },"answear3": {
-        "answear": "Treść odpowiedzi 3",
+      },
+      "answear3": {
+        "answear": "Jest to przeniesienie deklaracji na sama górę",
         "score": 0
       }
     },
     {
-      "question": "Treść pytania nr 4",
+      "question": "Co robi el. classList.toggle(className) ?",
       "answear1": {
-        "answear": "Treść odpowiedzi 1",
-        "score": 1
+        "answear": "Dodaje podana klasę",
+        "score": 0
       },
       "answear2": {
-        "answear": "Treść odpowiedzi 2",
-        "score": 0
-      },"answear3": {
-        "answear": "Treść odpowiedzi 3",
+        "answear": "Przełącza podaną klasę",
+        "score": 1
+      },
+      "answear3": {
+        "answear": "Usuwa podaną klasę",
         "score": 0
       }
     },
     {
-      "question": "Treść pytania nr 5",
+      "question": "Które zdanie jest fałszywe?",
       "answear1": {
-        "answear": "Treść odpowiedzi 1",
+        "answear": "Props może być modyfikowany z wewnątrz komponentu, który go otrzymał.",
         "score": 1
       },
       "answear2": {
-        "answear": "Treść odpowiedzi 2",
+        "answear": "State może być modyfikowany z wewnątrz.",
         "score": 0
-      },"answear3": {
-        "answear": "Treść odpowiedzi 3",
+      },
+      "answear3": {
+        "answear": "Nie każdy komponent musi mieć state.",
         "score": 0
       }
     }
