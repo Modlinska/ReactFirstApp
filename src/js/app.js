@@ -5,7 +5,6 @@ import './../scss/style.scss';
 
 const App = () => <CoverPage/>;
 
-
 ReactDOM.render(
 <App />,
     document.querySelector('#app')
